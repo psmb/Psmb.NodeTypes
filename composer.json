@@ -1,0 +1,19 @@
+{
+    "description": "Our internal node types, probably not useful outside",
+    "type": "neos-package",
+    "name": "psmb/nodetypes",
+    "require": {
+        "typo3/neos": "*"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-0": {
+            "Psmb\\NodeTypes": "Classes/"
+        }
+    },
+    "extra": {
+        "neos": {
+            "package-key": "Psmb.NodeTypes"
+        }
+    }
+}
