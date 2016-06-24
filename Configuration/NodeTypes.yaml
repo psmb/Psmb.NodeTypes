@@ -6,6 +6,10 @@
   properties:
     text:
       type: string
+      ui:
+        inlineEditable: true
+        aloha:
+          placeholder: 'Введите текст'
 
 'Psmb.NodeTypes:Headline':
   superTypes:
@@ -15,6 +19,10 @@
   properties:
     text:
       type: string
+      ui:
+        inlineEditable: true
+        aloha:
+          placeholder: 'Введите текст'
 
 'Psmb.NodeTypes:Blockquote':
   superTypes:
@@ -24,6 +32,23 @@
   properties:
     text:
       type: string
+      ui:
+        inlineEditable: true
+        aloha:
+          placeholder: 'Введите текст'
+
+'Psmb.NodeTypes:Lead':
+  superTypes:
+    'TYPO3.Neos:Content': true
+  ui:
+    label: 'Лид'
+  properties:
+    text:
+      type: string
+      ui:
+        inlineEditable: true
+        aloha:
+          placeholder: 'Введите текст'
 
 'Psmb.NodeTypes:Section':
   superTypes:
@@ -33,6 +58,10 @@
   properties:
     text:
       type: string
+      ui:
+        inlineEditable: true
+        aloha:
+          placeholder: 'Введите текст'
 
 'Psmb.NodeTypes:Aside':
   superTypes:
@@ -42,6 +71,10 @@
   properties:
     text:
       type: string
+      ui:
+        inlineEditable: true
+        aloha:
+          placeholder: 'Введите текст'
 
 
 'Psmb.NodeTypes:Image':

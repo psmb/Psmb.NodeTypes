@@ -1,24 +1,64 @@
 prototype(Psmb.NodeTypes:Text) < prototype(TYPO3.TypoScript:Tag) {
-	content = ${q(node).property('text')}
+	attributes.class = 'Text'
+	content = TYPO3.TypoScript:Tag {
+		content = ${q(node).property('text')}
+		@process.contentElementEditable = TYPO3.Neos:ContentElementEditable {
+			property = 'text'
+		}
+	}
 	@process.contentElementWrapping = TYPO3.Neos:ContentElementWrapping
 }
 prototype(Psmb.NodeTypes:Headline) < prototype(TYPO3.TypoScript:Tag) {
-	content = ${q(node).property('text')}
+	attributes.class = 'Headline'
+	content = TYPO3.TypoScript:Tag {
+		content = ${q(node).property('text')}
+		@process.contentElementEditable = TYPO3.Neos:ContentElementEditable {
+			property = 'text'
+		}
+	}
+	@process.contentElementWrapping = TYPO3.Neos:ContentElementWrapping
+}
+prototype(Psmb.NodeTypes:Lead) < prototype(TYPO3.TypoScript:Tag) {
+	attributes.class = 'Lead'
+	content = TYPO3.TypoScript:Tag {
+		content = ${q(node).property('text')}
+		@process.contentElementEditable = TYPO3.Neos:ContentElementEditable {
+			property = 'text'
+		}
+	}
 	@process.contentElementWrapping = TYPO3.Neos:ContentElementWrapping
 }
 prototype(Psmb.NodeTypes:Blockquote) < prototype(TYPO3.TypoScript:Tag) {
 	tagName = 'blockquote'
-	content = ${q(node).property('text')}
+	attributes.class = 'Blockquote'
+	content = TYPO3.TypoScript:Tag {
+		content = ${q(node).property('text')}
+		@process.contentElementEditable = TYPO3.Neos:ContentElementEditable {
+			property = 'text'
+		}
+	}
 	@process.contentElementWrapping = TYPO3.Neos:ContentElementWrapping
 }
 prototype(Psmb.NodeTypes:Section) < prototype(TYPO3.TypoScript:Tag) {
 	tagName = 'section'
-	content = ${q(node).property('text')}
+	attributes.class = 'Section'
+	content = T:Tag {
+		content = ${q(node).property('text')}
+		@process.contentElementEditable = TYPO3.Neos:ContentElementEditable {
+			property = 'text'
+		}
+	}
 	@process.contentElementWrapping = TYPO3.Neos:ContentElementWrapping
 }
 prototype(Psmb.NodeTypes:Aside) < prototype(TYPO3.TypoScript:Tag) {
 	tagName = 'aside'
-	content = ${q(node).property('text')}
+	attributes.class = 'Aside'
+	content = TYPO3.TypoScript:Tag {
+		content = ${q(node).property('text')}
+		@process.contentElementEditable = TYPO3.Neos:ContentElementEditable {
+			property = 'text'
+		}
+	}
 	@process.contentElementWrapping = TYPO3.Neos:ContentElementWrapping
 }
 prototype(Psmb.NodeTypes:Image) < prototype(TYPO3.TypoScript:Tag) {
