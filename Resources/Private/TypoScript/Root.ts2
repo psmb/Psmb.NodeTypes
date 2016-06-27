@@ -84,3 +84,11 @@ prototype(Psmb.NodeTypes:Asset) < prototype(TYPO3.TypoScript:Tag) {
 	@process.wrap = ${'<div>' + value + '</div>'}
 	@process.contentElementWrapping = TYPO3.Neos:ContentElementWrapping
 }
+
+prototype(Psmb.NodeTypes:Container) < prototype(TYPO3.TypoScript:Tag) {
+	attributes.class = ${'Container ' + node.properties.class}
+	attributes.id = ${node.properties.navTitle}
+	content = ContentCollectionRenderer {
+		@process.contentElementWrapping = ContentElementWrapping
+	}
+}

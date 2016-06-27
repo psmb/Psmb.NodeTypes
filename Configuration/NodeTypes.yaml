@@ -123,3 +123,23 @@
           group: asset
         label: 'Файл'
         reloadIfChanged: true
+
+'Psmb.NodeTypes:Container':
+  superTypes:
+    'TYPO3.Neos:Content': true
+  ui:
+    label: 'Контэйнер'
+    inspector:
+      groups:
+        container:
+          label: 'Свойства контэйнера'
+  constraints:
+    nodeTypes:
+      '*' : true
+  properties:
+    class:
+      type: string
+      ui:
+        label: 'Custom HTML classes'
+        inspector:
+          group: container
