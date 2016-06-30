@@ -92,3 +92,9 @@ prototype(Psmb.NodeTypes:Container) < prototype(TYPO3.TypoScript:Tag) {
 		@process.contentElementWrapping = ContentElementWrapping
 	}
 }
+
+prototype(Psmb.NodeTypes:Html) < prototype(TYPO3.TypoScript:Tag) {
+	attributes.class = 'Html'
+	content = ${node.properties.source}
+	@process.contentElementWrapping = ContentElementWrapping
+}

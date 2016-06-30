@@ -143,3 +143,28 @@
         label: 'Custom HTML classes'
         inspector:
           group: container
+
+'Psmb.NodeTypes:Html':
+  superTypes:
+    'TYPO3.Neos:Content': TRUE
+  ui:
+    label: 'HTML'
+    icon: 'icon-code'
+    inspector:
+      groups:
+        html:
+          label: 'HTML'
+          icon: 'icon-code'
+          position: 10
+  properties:
+    source:
+      type: string
+      defaultValue: '<p>HTML сюда</p>'
+      ui:
+        label: 'HTML'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'html'
+          editor: 'TYPO3.Neos/Inspector/Editors/CodeEditor'
+          editorOptions:
+            buttonLabel: 'Редактировать HTML'
