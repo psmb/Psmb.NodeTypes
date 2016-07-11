@@ -1,3 +1,44 @@
+blah: &alohaPlain
+  placeholder: 'Текст тут'
+  format:
+    b: FALSE
+    i: FALSE
+    u: FALSE
+    sub: FALSE
+    sup: FALSE
+    p: FALSE
+    h1: FALSE
+    h2: FALSE
+    h3: FALSE
+    pre: FALSE
+    removeFormat: FALSE
+  table: {  }
+  list: {  }
+  link:
+    a: FALSE
+  alignment: {  }
+
+blah: &alohaRich
+  placeholder: 'Текст тут'
+  format:
+    b: TRUE
+    i: TRUE
+    u: FALSE
+    sub: TRUE
+    sup: TRUE
+    p: FALSE
+    h1: FALSE
+    h2: FALSE
+    h3: FALSE
+    pre: FALSE
+    removeFormat: FALSE
+  table: {  }
+  list: {  }
+  link:
+    a: TRUE
+  alignment: {  }
+
+
 'Psmb.NodeTypes:Text':
   superTypes:
     'TYPO3.Neos:Content': true
@@ -9,6 +50,7 @@
       ui:
         inlineEditable: true
         aloha:
+          <<: *alohaRich
           placeholder: 'Введите текст'
 
 'Psmb.NodeTypes:Headline':
@@ -22,6 +64,7 @@
       ui:
         inlineEditable: true
         aloha:
+          <<: *alohaPlain
           placeholder: 'Введите текст'
 
 'Psmb.NodeTypes:Blockquote':
@@ -35,6 +78,7 @@
       ui:
         inlineEditable: true
         aloha:
+          <<: *alohaPlain
           placeholder: 'Введите текст'
 
 'Psmb.NodeTypes:Lead':
@@ -48,6 +92,7 @@
       ui:
         inlineEditable: true
         aloha:
+          <<: *alohaPlain
           placeholder: 'Введите текст'
 
 'Psmb.NodeTypes:Section':
@@ -61,6 +106,7 @@
       ui:
         inlineEditable: true
         aloha:
+          <<: *alohaPlain
           placeholder: 'Введите текст'
 
 'Psmb.NodeTypes:Aside':
@@ -74,6 +120,7 @@
       ui:
         inlineEditable: true
         aloha:
+          <<: *alohaPlain
           placeholder: 'Введите текст'
 
 
@@ -115,6 +162,7 @@
       ui:
         inlineEditable: true
         aloha:
+          <<: *alohaPlain
           placeholder: 'Подпись к файлу'
     asset:
       type: TYPO3\Media\Domain\Model\Asset
