@@ -61,6 +61,10 @@ prototype(Psmb.NodeTypes:Aside) < prototype(TYPO3.TypoScript:Tag) {
 	}
 	@process.contentElementWrapping = TYPO3.Neos:ContentElementWrapping
 }
+prototype(Psmb.NodeTypes:Epigraph) < prototype(TYPO3.TypoScript:Tag) {
+	content = ${q(node).property('text')}
+	@process.contentElementWrapping = TYPO3.Neos:ContentElementWrapping
+}
 prototype(Psmb.NodeTypes:Image) < prototype(TYPO3.TypoScript:Tag) {
 	tagName = 'figure'
 	content = TYPO3.TypoScript:Array {

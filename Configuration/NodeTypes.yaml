@@ -192,6 +192,14 @@
             'a': TRUE
           alignment: {  }
 
+'Psmb.NodeTypes:Epigraph':
+  superTypes:
+    'TYPO3.Neos:Content': true
+  ui:
+    label: 'Эпиграф'
+  properties:
+    text:
+      type: string
 
 'Psmb.NodeTypes:Image':
   superTypes:
