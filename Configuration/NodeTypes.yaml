@@ -200,6 +200,8 @@
   properties:
     text:
       type: string
+      ui:
+        inlineEditable: true
 
 'Psmb.NodeTypes:Image':
   superTypes:
