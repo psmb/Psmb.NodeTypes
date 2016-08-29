@@ -42,7 +42,7 @@ prototype(Psmb.NodeTypes:Blockquote) < prototype(TYPO3.TypoScript:Tag) {
 prototype(Psmb.NodeTypes:Section) < prototype(TYPO3.TypoScript:Tag) {
 	tagName = 'section'
 	attributes.class = 'Section'
-	content = T:Tag {
+	content = TYPO3.TypoScript:Tag {
 		content = ${q(node).property('text')}
 		@process.contentElementEditable = TYPO3.Neos:ContentElementEditable {
 			property = 'text'
