@@ -34,7 +34,11 @@
             'ul': TRUE
           'link':
             'a': TRUE
-          alignment: {  }
+          'alignment': {  }
+          'formatlesspaste':
+            'button': false # Show toggle button for formatless pasting.
+            'formatlessPasteOption': true # Whether the format less pasting should be enable by default.
+            'autoparagraph': true
 
 'Psmb.NodeTypes:Headline':
   superTypes:
@@ -82,14 +86,24 @@
         image:
           label: 'Изображение'
   properties:
-    alt:
-      type: string
-    caption:
-      type: string
     image:
       type: TYPO3\Media\Domain\Model\ImageInterface
       ui:
         label: 'Изображение'
+        reloadIfChanged: TRUE
+        inspector:
+          group: image
+    caption:
+      type: string
+      ui:
+        label: 'Подпись'
+        reloadIfChanged: TRUE
+        inspector:
+          group: image
+    alt:
+      type: string
+      ui:
+        label: 'Алтернативный текст (если не задан, используется подпись)'
         reloadIfChanged: TRUE
         inspector:
           group: image
@@ -130,6 +144,10 @@
           'link':
             'a': TRUE
           alignment: {  }
+          'formatlesspaste':
+            'button': false # Show toggle button for formatless pasting.
+            'formatlessPasteOption': true # Whether the format less pasting should be enable by default.
+            'autoparagraph': true
 
 'Psmb.NodeTypes:Epigraph':
   superTypes:
@@ -151,7 +169,7 @@
   superTypes:
     'TYPO3.Neos:Content': true
   ui:
-    label: 'Цитата-врез'
+    label: 'Цитата (врезка)'
     icon: 'icon-angle-right'
     position: 60
   properties:
@@ -180,12 +198,16 @@
           'link':
             'a': TRUE
           alignment: {  }
+          'formatlesspaste':
+            'button': false # Show toggle button for formatless pasting.
+            'formatlessPasteOption': true # Whether the format less pasting should be enable by default.
+            'autoparagraph': true
 
 'Psmb.NodeTypes:Section':
   superTypes:
     'TYPO3.Neos:Content': true
   ui:
-    label: 'Секция'
+    label: 'Секция (большая справка)'
     icon: 'icon-file-text'
     position: 70
   properties:
@@ -214,12 +236,16 @@
           'link':
             'a': TRUE
           alignment: {  }
+          'formatlesspaste':
+            'button': false # Show toggle button for formatless pasting.
+            'formatlessPasteOption': true # Whether the format less pasting should be enable by default.
+            'autoparagraph': true
 
 'Psmb.NodeTypes:Aside':
   superTypes:
     'TYPO3.Neos:Content': true
   ui:
-    label: 'На полях'
+    label: 'Врезка на полях'
     icon: 'icon-file-text-alt'
     position: 80
   properties:
@@ -248,6 +274,48 @@
           'link':
             'a': TRUE
           alignment: {  }
+          'formatlesspaste':
+            'button': false # Show toggle button for formatless pasting.
+            'formatlessPasteOption': true # Whether the format less pasting should be enable by default.
+            'autoparagraph': true
+
+'Psmb.NodeTypes:Small':
+  superTypes:
+    'TYPO3.Neos:Content': true
+  ui:
+    label: 'Петит (для сносок)'
+    icon: 'icon-file-text-alt'
+    position: 80
+  properties:
+    text:
+      type: string
+      ui:
+        inlineEditable: true
+        aloha:
+          placeholder: 'Введите текст'
+          'format':
+            'strong': TRUE
+            'em': TRUE
+            'u': FALSE
+            'sub': FALSE
+            'sup': FALSE
+            'del': FALSE
+            'p': TRUE
+            'h1': FALSE
+            'h2': FALSE
+            'h3': FALSE
+            'pre': FALSE
+            'removeFormat': TRUE
+          'table':
+            'table': FALSE
+          'list': { }
+          'link':
+            'a': TRUE
+          alignment: {  }
+          'formatlesspaste':
+            'button': false # Show toggle button for formatless pasting.
+            'formatlessPasteOption': true # Whether the format less pasting should be enable by default.
+            'autoparagraph': true
 
 
 # Misc

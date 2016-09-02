@@ -61,6 +61,17 @@ prototype(Psmb.NodeTypes:Aside) < prototype(TYPO3.TypoScript:Tag) {
 	}
 	@process.contentElementWrapping = TYPO3.Neos:ContentElementWrapping
 }
+prototype(Psmb.NodeTypes:Small) < prototype(TYPO3.TypoScript:Tag) {
+	tagName = 'small'
+	attributes.class = 'Small'
+	content = TYPO3.TypoScript:Tag {
+		content = ${q(node).property('text')}
+		@process.contentElementEditable = TYPO3.Neos:ContentElementEditable {
+			property = 'text'
+		}
+	}
+	@process.contentElementWrapping = TYPO3.Neos:ContentElementWrapping
+}
 prototype(Psmb.NodeTypes:Epigraph) < prototype(TYPO3.TypoScript:Tag) {
 	attributes.class = 'Epigraph'
 	content = TYPO3.TypoScript:Tag {
