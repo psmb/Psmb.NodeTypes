@@ -332,11 +332,6 @@
         asset:
           label: 'Файл'
   properties:
-    title:
-      type: string
-      ui:
-        inspector:
-          group: asset
     asset:
       type: TYPO3\Media\Domain\Model\Asset
       ui:
@@ -344,6 +339,12 @@
           group: asset
         label: 'Файл'
         reloadIfChanged: true
+    title:
+      type: string
+      ui:
+        inspector:
+          group: asset
+          label: 'Подпись к файлу'
 
 'Psmb.NodeTypes:Container':
   superTypes:
