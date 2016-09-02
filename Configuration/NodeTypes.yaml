@@ -1,8 +1,12 @@
+# Main
+
 'Psmb.NodeTypes:Text':
   superTypes:
     'TYPO3.Neos:Content': true
   ui:
     label: 'Текст'
+    icon: 'icon-file-text'
+    position: 10
   properties:
     text:
       type: string
@@ -37,6 +41,8 @@
     'TYPO3.Neos:Content': true
   ui:
     label: 'Заголовок'
+    icon: 'icon-header'
+    position: 20
   properties:
     text:
       type: string
@@ -64,107 +70,40 @@
             'a': TRUE
           alignment: {  }
 
-'Psmb.NodeTypes:Blockquote':
+'Psmb.NodeTypes:Image':
   superTypes:
     'TYPO3.Neos:Content': true
   ui:
-    label: 'Цитата-врез'
+    label: 'Картинка'
+    icon: 'icon-picture'
+    position: 30
+    inspector:
+      groups:
+        image:
+          label: 'Изображение'
   properties:
-    text:
+    alt:
       type: string
+    caption:
+      type: string
+    image:
+      type: TYPO3\Media\Domain\Model\ImageInterface
       ui:
-        inlineEditable: true
-        aloha:
-          placeholder: 'Введите текст'
-          'format':
-            'strong': TRUE
-            'em': TRUE
-            'u': FALSE
-            'sub': FALSE
-            'sup': FALSE
-            'del': FALSE
-            'p': TRUE
-            'h1': FALSE
-            'h2': FALSE
-            'h3': FALSE
-            'pre': FALSE
-            'removeFormat': TRUE
-          'table':
-            'table': FALSE
-          'list': { }
-          'link':
-            'a': TRUE
-          alignment: {  }
+        label: 'Изображение'
+        reloadIfChanged: TRUE
+        inspector:
+          group: image
+
+
+# Typography
 
 'Psmb.NodeTypes:Lead':
   superTypes:
     'TYPO3.Neos:Content': true
   ui:
     label: 'Лид'
-  properties:
-    text:
-      type: string
-      ui:
-        inlineEditable: true
-        aloha:
-          placeholder: 'Введите текст'
-          'format':
-            'strong': TRUE
-            'em': TRUE
-            'u': FALSE
-            'sub': FALSE
-            'sup': FALSE
-            'del': FALSE
-            'p': TRUE
-            'h1': FALSE
-            'h2': FALSE
-            'h3': FALSE
-            'pre': FALSE
-            'removeFormat': TRUE
-          'table':
-            'table': FALSE
-          'list': { }
-          'link':
-            'a': TRUE
-          alignment: {  }
-
-'Psmb.NodeTypes:Section':
-  superTypes:
-    'TYPO3.Neos:Content': true
-  ui:
-    label: 'Секция'
-  properties:
-    text:
-      type: string
-      ui:
-        inlineEditable: true
-        aloha:
-          placeholder: 'Введите текст'
-          'format':
-            'strong': TRUE
-            'em': TRUE
-            'u': FALSE
-            'sub': FALSE
-            'sup': FALSE
-            'del': FALSE
-            'p': TRUE
-            'h1': FALSE
-            'h2': FALSE
-            'h3': FALSE
-            'pre': FALSE
-            'removeFormat': TRUE
-          'table':
-            'table': FALSE
-          'list': { }
-          'link':
-            'a': TRUE
-          alignment: {  }
-
-'Psmb.NodeTypes:Aside':
-  superTypes:
-    'TYPO3.Neos:Content': true
-  ui:
-    label: 'На полях'
+    icon: 'icon-font'
+    position: 40
   properties:
     text:
       type: string
@@ -197,40 +136,129 @@
     'TYPO3.Neos:Content': true
   ui:
     label: 'Эпиграф'
+    icon: 'icon-font'
+    position: 50
   properties:
     text:
       type: string
       ui:
         inlineEditable: true
 
-'Psmb.NodeTypes:Image':
+
+# Blocks
+
+'Psmb.NodeTypes:Blockquote':
   superTypes:
     'TYPO3.Neos:Content': true
   ui:
-    label: 'Картинка'
-    inspector:
-      groups:
-        image:
-          label: 'Изображение'
+    label: 'Цитата-врез'
+    icon: 'icon-angle-right'
+    position: 60
   properties:
-    alt:
+    text:
       type: string
-    caption:
-      type: string
-    image:
-      type: TYPO3\Media\Domain\Model\ImageInterface
       ui:
-        label: 'Изображение'
-        reloadIfChanged: TRUE
-        inspector:
-          group: image
+        inlineEditable: true
+        aloha:
+          placeholder: 'Введите текст'
+          'format':
+            'strong': TRUE
+            'em': TRUE
+            'u': FALSE
+            'sub': FALSE
+            'sup': FALSE
+            'del': FALSE
+            'p': TRUE
+            'h1': FALSE
+            'h2': FALSE
+            'h3': FALSE
+            'pre': FALSE
+            'removeFormat': TRUE
+          'table':
+            'table': FALSE
+          'list': { }
+          'link':
+            'a': TRUE
+          alignment: {  }
 
+'Psmb.NodeTypes:Section':
+  superTypes:
+    'TYPO3.Neos:Content': true
+  ui:
+    label: 'Секция'
+    icon: 'icon-file-text'
+    position: 70
+  properties:
+    text:
+      type: string
+      ui:
+        inlineEditable: true
+        aloha:
+          placeholder: 'Введите текст'
+          'format':
+            'strong': TRUE
+            'em': TRUE
+            'u': FALSE
+            'sub': FALSE
+            'sup': FALSE
+            'del': FALSE
+            'p': TRUE
+            'h1': FALSE
+            'h2': FALSE
+            'h3': FALSE
+            'pre': FALSE
+            'removeFormat': TRUE
+          'table':
+            'table': FALSE
+          'list': { }
+          'link':
+            'a': TRUE
+          alignment: {  }
+
+'Psmb.NodeTypes:Aside':
+  superTypes:
+    'TYPO3.Neos:Content': true
+  ui:
+    label: 'На полях'
+    icon: 'icon-file-text-alt'
+    position: 80
+  properties:
+    text:
+      type: string
+      ui:
+        inlineEditable: true
+        aloha:
+          placeholder: 'Введите текст'
+          'format':
+            'strong': TRUE
+            'em': TRUE
+            'u': FALSE
+            'sub': FALSE
+            'sup': FALSE
+            'del': FALSE
+            'p': TRUE
+            'h1': FALSE
+            'h2': FALSE
+            'h3': FALSE
+            'pre': FALSE
+            'removeFormat': TRUE
+          'table':
+            'table': FALSE
+          'list': { }
+          'link':
+            'a': TRUE
+          alignment: {  }
+
+
+# Misc
 
 'Psmb.NodeTypes:Asset':
   superTypes:
     'TYPO3.Neos:Content': true
   ui:
     label: 'Файл'
+    icon: 'icon-files-o'
+    position: 90
     inspector:
       groups:
         asset:
@@ -255,6 +283,8 @@
     'TYPO3.Neos:Content': true
   ui:
     label: 'Контэйнер'
+    icon: 'icon-archive'
+    group: structure
     inspector:
       groups:
         container:
@@ -276,6 +306,7 @@
   ui:
     label: 'HTML'
     icon: 'icon-code'
+    position: 100
     inspector:
       groups:
         html:
