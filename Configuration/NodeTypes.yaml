@@ -36,7 +36,7 @@
             'a': TRUE
           'alignment': {  }
           'formatlesspaste':
-            'button': false # Show toggle button for formatless pasting.
+            'button': true # Show toggle button for formatless pasting.
             'formatlessPasteOption': true # Whether the format less pasting should be enable by default.
             'autoparagraph': true
 
