@@ -103,7 +103,7 @@
     alt:
       type: string
       ui:
-        label: 'Алтернативный текст (если не задан, используется подпись)'
+        label: 'Альтернативный текст (если не задан, используется подпись)'
         reloadIfChanged: TRUE
         inspector:
           group: image
