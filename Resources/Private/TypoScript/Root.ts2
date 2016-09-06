@@ -86,6 +86,7 @@ prototype(Psmb.NodeTypes:Image) < prototype(TYPO3.TypoScript:Tag) {
 	tagName = 'figure'
 	content = TYPO3.TypoScript:Array {
 		image = TYPO3.Neos:ImageTag {
+			attributes.alt = ${q(node).property('caption') || q(node).property('caption')}
 			asset = ${q(node).property('image')}
 			maximumWidth = 900
 		}
