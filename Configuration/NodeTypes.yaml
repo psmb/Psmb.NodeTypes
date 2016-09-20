@@ -13,7 +13,7 @@
       ui:
         inlineEditable: true
         aloha:
-          placeholder: 'Введите текст'
+          placeholder: '<p>Введите текст</p>'
           'format':
             'strong': TRUE
             'em': TRUE
@@ -53,7 +53,7 @@
       ui:
         inlineEditable: true
         aloha:
-          placeholder: 'Введите текст'
+          placeholder: '<h2>Введите текст</h2>'
           'format':
             'strong': FALSE
             'em': FALSE
@@ -124,7 +124,7 @@
       ui:
         inlineEditable: true
         aloha:
-          placeholder: 'Введите текст'
+          placeholder: '<p>Введите текст</p>'
           'format':
             'strong': TRUE
             'em': TRUE
@@ -178,7 +178,7 @@
       ui:
         inlineEditable: true
         aloha:
-          placeholder: 'Введите текст'
+          placeholder: '<p>Введите текст</p>'
           'format':
             'strong': TRUE
             'em': TRUE
@@ -216,7 +216,7 @@
       ui:
         inlineEditable: true
         aloha:
-          placeholder: 'Введите текст'
+          placeholder: '<p>Введите текст</p>'
           'format':
             'strong': TRUE
             'em': TRUE
@@ -254,7 +254,7 @@
       ui:
         inlineEditable: true
         aloha:
-          placeholder: 'Введите текст'
+          placeholder: '<p>Введите текст</p>'
           'format':
             'strong': TRUE
             'em': TRUE
@@ -292,7 +292,7 @@
       ui:
         inlineEditable: true
         aloha:
-          placeholder: 'Введите текст'
+          placeholder: '<p>Введите текст</p>'
           'format':
             'strong': TRUE
             'em': TRUE
@@ -367,6 +367,30 @@
         label: 'Custom HTML classes'
         inspector:
           group: container
+
+'Psmb.NodeTypes:ContainerOverImage':
+  superTypes:
+    'TYPO3.Neos:Content': true
+    'TYPO3.Neos:ContentCollection': true
+  ui:
+    label: 'Фоновое изображение с контентом'
+    icon: 'icon-picture'
+    group: structure
+    inspector:
+      groups:
+        image:
+          label: 'Свойства'
+  constraints:
+    nodeTypes:
+      '*' : true
+  properties:
+    image:
+      type: TYPO3\Media\Domain\Model\ImageInterface
+      ui:
+        label: 'Изображение'
+        reloadIfChanged: TRUE
+        inspector:
+          group: image
 
 'Psmb.NodeTypes:Html':
   superTypes:
