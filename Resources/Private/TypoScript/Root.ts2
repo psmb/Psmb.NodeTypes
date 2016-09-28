@@ -1,3 +1,26 @@
+prototype(Psmb.NodeTypes:ImageUri) < prototype(TYPO3.TypoScript:Case) {
+	image {
+		condition = ${asset}
+		renderer = ImageUri {
+			asset = ${asset}
+			width = ${width}
+			height = ${height}
+			maximumWidth = ${maximumWidth}
+			maximumHeight = ${maximumHeight}
+			allowCropping = ${allowCropping}
+			allowUpscaling = ${allowUpscaling}
+		}
+	}
+	dummyImage {
+		condition = ${site.context.inBackend}
+		renderer = TYPO3.TypoScript:ResourceUri {
+			path = 'resource://TYPO3.Neos/Public/Images/dummy-image.svg'
+		}
+	}
+}
+
+
+
 prototype(Psmb.NodeTypes:Text) < prototype(TYPO3.TypoScript:Tag) {
 	attributes.class = 'Text'
 	content = TYPO3.TypoScript:Tag {
@@ -84,10 +107,13 @@ prototype(Psmb.NodeTypes:Epigraph) < prototype(TYPO3.TypoScript:Tag) {
 prototype(Psmb.NodeTypes:Image) < prototype(TYPO3.TypoScript:Tag) {
 	tagName = 'figure'
 	content = TYPO3.TypoScript:Array {
-		image = ImageTag {
+		image = TYPO3.TypoScript:Tag {
+			tagName = 'img'
 			attributes.alt = ${q(node).property('alt') || q(node).property('caption')}
-			asset = ${q(node).property('image')}
-			maximumWidth = 900
+			attributes.src = Psmb.NodeTypes:ImageUri {
+				@context.asset = ${q(node).property('image')}
+				@context.maximumWidth = 900
+			}
 		}
 		caption = TYPO3.TypoScript:Tag {
 			tagName = 'figcaption'
