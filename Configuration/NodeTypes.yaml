@@ -2,7 +2,7 @@
 
 'Psmb.NodeTypes:Text':
   superTypes:
-    'TYPO3.Neos:Content': true
+    'Neos.Neos:Content': true
   ui:
     label: Текст
     icon: icon-file-text
@@ -41,7 +41,7 @@
             autoparagraph: true
 'Psmb.NodeTypes:Headline':
   superTypes:
-    'TYPO3.Neos:Content': true
+    'Neos.Neos:Content': true
   ui:
     label: Заголовок
     icon: icon-header
@@ -74,7 +74,7 @@
           alignment: {  }
 'Psmb.NodeTypes:Image':
   superTypes:
-    'TYPO3.Neos:Content': true
+    'Neos.Neos:Content': true
   ui:
     label: Картинка
     icon: icon-picture
@@ -107,7 +107,7 @@
           group: image
 'Psmb.NodeTypes:Lead':
   superTypes:
-    'TYPO3.Neos:Content': true
+    'Neos.Neos:Content': true
   ui:
     label: Лид
     icon: icon-font
@@ -144,7 +144,7 @@
             autoparagraph: true
 'Psmb.NodeTypes:Epigraph':
   superTypes:
-    'TYPO3.Neos:Content': true
+    'Neos.Neos:Content': true
   ui:
     label: Эпиграф
     icon: icon-font
@@ -156,7 +156,7 @@
         inlineEditable: true
 'Psmb.NodeTypes:Blockquote':
   superTypes:
-    'TYPO3.Neos:Content': true
+    'Neos.Neos:Content': true
   ui:
     label: 'Цитата (врезка)'
     icon: icon-angle-right
@@ -193,7 +193,7 @@
             autoparagraph: true
 'Psmb.NodeTypes:Section':
   superTypes:
-    'TYPO3.Neos:Content': true
+    'Neos.Neos:Content': true
   ui:
     label: 'Секция (большая справка)'
     icon: icon-file-text
@@ -230,7 +230,7 @@
             autoparagraph: true
 'Psmb.NodeTypes:Aside':
   superTypes:
-    'TYPO3.Neos:Content': true
+    'Neos.Neos:Content': true
   ui:
     label: 'Врезка на полях'
     icon: icon-file-text-alt
@@ -267,7 +267,7 @@
             autoparagraph: true
 'Psmb.NodeTypes:Small':
   superTypes:
-    'TYPO3.Neos:Content': true
+    'Neos.Neos:Content': true
   ui:
     label: 'Петит (для сносок)'
     icon: icon-file-text-alt
@@ -304,7 +304,7 @@
             autoparagraph: true
 'Psmb.NodeTypes:Asset':
   superTypes:
-    'TYPO3.Neos:Content': true
+    'Neos.Neos:Content': true
   ui:
     label: Файл
     icon: icon-files-o
@@ -329,7 +329,7 @@
           label: 'Подпись к файлу'
 'Psmb.NodeTypes:Container':
   superTypes:
-    'TYPO3.Neos:Content': true
+    'Neos.Neos:Content': true
   ui:
     label: Контэйнер
     icon: icon-archive
@@ -350,8 +350,8 @@
           group: container
 'Psmb.NodeTypes:ContainerOverImage':
   superTypes:
-    'TYPO3.Neos:Content': true
-    'TYPO3.Neos:ContentCollection': true
+    'Neos.Neos:Content': true
+    'Neos.Neos:ContentCollection': true
   ui:
     label: 'Фоновое изображение с контентом'
     icon: icon-picture
@@ -373,7 +373,7 @@
           group: image
 'Psmb.NodeTypes:Html':
   superTypes:
-    'TYPO3.Neos:Content': true
+    'Neos.Neos:Content': true
   ui:
     label: HTML
     icon: icon-code
@@ -393,6 +393,6 @@
         reloadIfChanged: true
         inspector:
           group: html
-          editor: TYPO3.Neos/Inspector/Editors/CodeEditor
+          editor: Neos.Neos/Inspector/Editors/CodeEditor
           editorOptions:
             buttonLabel: 'Редактировать HTML'
