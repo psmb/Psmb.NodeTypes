@@ -85,7 +85,7 @@
           label: Изображение
   properties:
     image:
-      type: TYPO3\Media\Domain\Model\ImageInterface
+      type: Neos\Media\Domain\Model\ImageInterface
       ui:
         label: Изображение
         reloadIfChanged: true
@@ -315,7 +315,7 @@
           label: Файл
   properties:
     asset:
-      type: TYPO3\Media\Domain\Model\Asset
+      type: Neos\Media\Domain\Model\Asset
       ui:
         inspector:
           group: asset
@@ -365,7 +365,7 @@
       '*': true
   properties:
     image:
-      type: TYPO3\Media\Domain\Model\ImageInterface
+      type: Neos\Media\Domain\Model\ImageInterface
       ui:
         label: Изображение
         reloadIfChanged: true
