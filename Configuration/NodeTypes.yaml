@@ -2,10 +2,10 @@
 
 'Psmb.NodeTypes:Text':
   superTypes:
-    'TYPO3.Neos:Content': true
+    'TYPO3.Neos:Content': '1'
   ui:
-    label: 'Текст'
-    icon: 'icon-file-text'
+    label: Текст
+    icon: icon-file-text
     position: 10
   properties:
     text:
@@ -14,38 +14,37 @@
         inlineEditable: true
         aloha:
           placeholder: '<p>Введите текст</p>'
-          'format':
-            'strong': TRUE
-            'em': TRUE
-            'u': FALSE
-            'sub': TRUE
-            'sup': TRUE
-            'del': FALSE
-            'p': TRUE
-            'h1': FALSE
-            'h2': TRUE
-            'h3': TRUE
-            'pre': FALSE
-            'removeFormat': TRUE
-          'table':
-            'table': TRUE
-          'list':
-            'ol': TRUE
-            'ul': TRUE
-          'link':
-            'a': TRUE
-          'alignment': {  }
-          'formatlesspaste':
-            'button': true # Show toggle button for formatless pasting.
-            'formatlessPasteOption': true # Whether the format less pasting should be enable by default.
-            'autoparagraph': true
-
+          format:
+            strong: true
+            em: true
+            u: false
+            sub: true
+            sup: true
+            del: false
+            p: true
+            h1: false
+            h2: true
+            h3: true
+            pre: false
+            removeFormat: true
+          table:
+            table: true
+          list:
+            ol: true
+            ul: true
+          link:
+            a: true
+          alignment: {  }
+          formatlesspaste:
+            button: true
+            formatlessPasteOption: true
+            autoparagraph: true
 'Psmb.NodeTypes:Headline':
   superTypes:
-    'TYPO3.Neos:Content': true
+    'TYPO3.Neos:Content': '1'
   ui:
-    label: 'Заголовок'
-    icon: 'icon-header'
+    label: Заголовок
+    icon: icon-header
     position: 20
   properties:
     text:
@@ -54,69 +53,64 @@
         inlineEditable: true
         aloha:
           placeholder: '<h2>Введите текст</h2>'
-          'format':
-            'strong': FALSE
-            'em': FALSE
-            'u': FALSE
-            'sub': FALSE
-            'sup': FALSE
-            'del': FALSE
-            'p': FALSE
-            'h1': FALSE
-            'h2': TRUE
-            'h3': TRUE
-            'pre': FALSE
-            'removeFormat': TRUE
-          'table':
-            'table': FALSE
-          'list': { }
-          'link':
-            'a': TRUE
+          format:
+            strong: false
+            em: false
+            u: false
+            sub: false
+            sup: false
+            del: false
+            p: false
+            h1: false
+            h2: true
+            h3: true
+            pre: false
+            removeFormat: true
+          table:
+            table: false
+          list: {  }
+          link:
+            a: true
           alignment: {  }
-
 'Psmb.NodeTypes:Image':
   superTypes:
-    'TYPO3.Neos:Content': true
+    'TYPO3.Neos:Content': '1'
   ui:
-    label: 'Картинка'
-    icon: 'icon-picture'
+    label: Картинка
+    icon: icon-picture
     position: 30
     inspector:
       groups:
         image:
-          label: 'Изображение'
+          label: Изображение
   properties:
     image:
       type: TYPO3\Media\Domain\Model\ImageInterface
       ui:
-        label: 'Изображение'
-        reloadIfChanged: TRUE
+        label: Изображение
+        reloadIfChanged: true
         inspector:
           group: image
     caption:
       type: string
       ui:
-        label: 'Подпись'
-        reloadIfChanged: TRUE
+        label: Подпись
+        reloadIfChanged: true
         inspector:
           group: image
     alt:
       type: string
       ui:
         label: 'Альтернативный текст (если не задан, используется подпись)'
-        reloadIfChanged: TRUE
+        reloadIfChanged: true
         inspector:
           group: image
-
-
-# Typography
-
 'Psmb.NodeTypes:Lead':
   superTypes:
-    'TYPO3.Neos:Content': true
+    'TYPO3.Neos:Content': '1'
   ui:
-    label: 'Лид'
-    icon: 'icon-font'
+    label: Лид
+    icon: icon-font
     position: 40
   properties:
     text:
@@ -125,52 +119,47 @@
         inlineEditable: true
         aloha:
           placeholder: '<p>Введите текст</p>'
-          'format':
-            'strong': TRUE
-            'em': TRUE
-            'u': FALSE
-            'sub': FALSE
-            'sup': FALSE
-            'del': FALSE
-            'p': TRUE
-            'h1': FALSE
-            'h2': FALSE
-            'h3': FALSE
-            'pre': FALSE
-            'removeFormat': TRUE
-          'table':
-            'table': FALSE
-          'list': { }
-          'link':
-            'a': TRUE
+          format:
+            strong: true
+            em: true
+            u: false
+            sub: false
+            sup: false
+            del: false
+            p: true
+            h1: false
+            h2: false
+            h3: false
+            pre: false
+            removeFormat: true
+          table:
+            table: false
+          list: {  }
+          link:
+            a: true
           alignment: {  }
-          'formatlesspaste':
-            'button': true # Show toggle button for formatless pasting.
-            'formatlessPasteOption': true # Whether the format less pasting should be enable by default.
-            'autoparagraph': true
-
+          formatlesspaste:
+            button: true
+            formatlessPasteOption: true
+            autoparagraph: true
 'Psmb.NodeTypes:Epigraph':
   superTypes:
-    'TYPO3.Neos:Content': true
+    'TYPO3.Neos:Content': '1'
   ui:
-    label: 'Эпиграф'
-    icon: 'icon-font'
+    label: Эпиграф
+    icon: icon-font
     position: 50
   properties:
     text:
       type: string
       ui:
         inlineEditable: true
-
-
-# Blocks
-
 'Psmb.NodeTypes:Blockquote':
   superTypes:
-    'TYPO3.Neos:Content': true
+    'TYPO3.Neos:Content': '1'
   ui:
     label: 'Цитата (врезка)'
-    icon: 'icon-angle-right'
+    icon: icon-angle-right
     position: 60
   properties:
     text:
@@ -179,36 +168,35 @@
         inlineEditable: true
         aloha:
           placeholder: '<p>Введите текст</p>'
-          'format':
-            'strong': TRUE
-            'em': TRUE
-            'u': FALSE
-            'sub': FALSE
-            'sup': FALSE
-            'del': FALSE
-            'p': TRUE
-            'h1': FALSE
-            'h2': FALSE
-            'h3': FALSE
-            'pre': FALSE
-            'removeFormat': TRUE
-          'table':
-            'table': FALSE
-          'list': { }
-          'link':
-            'a': TRUE
+          format:
+            strong: true
+            em: true
+            u: false
+            sub: false
+            sup: false
+            del: false
+            p: true
+            h1: false
+            h2: false
+            h3: false
+            pre: false
+            removeFormat: true
+          table:
+            table: false
+          list: {  }
+          link:
+            a: true
           alignment: {  }
-          'formatlesspaste':
-            'button': true # Show toggle button for formatless pasting.
-            'formatlessPasteOption': true # Whether the format less pasting should be enable by default.
-            'autoparagraph': true
-
+          formatlesspaste:
+            button: true
+            formatlessPasteOption: true
+            autoparagraph: true
 'Psmb.NodeTypes:Section':
   superTypes:
-    'TYPO3.Neos:Content': true
+    'TYPO3.Neos:Content': '1'
   ui:
     label: 'Секция (большая справка)'
-    icon: 'icon-file-text'
+    icon: icon-file-text
     position: 70
   properties:
     text:
@@ -217,36 +205,35 @@
         inlineEditable: true
         aloha:
           placeholder: '<p>Введите текст</p>'
-          'format':
-            'strong': TRUE
-            'em': TRUE
-            'u': FALSE
-            'sub': FALSE
-            'sup': FALSE
-            'del': FALSE
-            'p': TRUE
-            'h1': FALSE
-            'h2': FALSE
-            'h3': FALSE
-            'pre': FALSE
-            'removeFormat': TRUE
-          'table':
-            'table': FALSE
-          'list': { }
-          'link':
-            'a': TRUE
+          format:
+            strong: true
+            em: true
+            u: false
+            sub: false
+            sup: false
+            del: false
+            p: true
+            h1: false
+            h2: false
+            h3: false
+            pre: false
+            removeFormat: true
+          table:
+            table: false
+          list: {  }
+          link:
+            a: true
           alignment: {  }
-          'formatlesspaste':
-            'button': true # Show toggle button for formatless pasting.
-            'formatlessPasteOption': true # Whether the format less pasting should be enable by default.
-            'autoparagraph': true
-
+          formatlesspaste:
+            button: true
+            formatlessPasteOption: true
+            autoparagraph: true
 'Psmb.NodeTypes:Aside':
   superTypes:
-    'TYPO3.Neos:Content': true
+    'TYPO3.Neos:Content': '1'
   ui:
     label: 'Врезка на полях'
-    icon: 'icon-file-text-alt'
+    icon: icon-file-text-alt
     position: 80
   properties:
     text:
@@ -255,36 +242,35 @@
         inlineEditable: true
         aloha:
           placeholder: '<p>Введите текст</p>'
-          'format':
-            'strong': TRUE
-            'em': TRUE
-            'u': FALSE
-            'sub': FALSE
-            'sup': FALSE
-            'del': FALSE
-            'p': TRUE
-            'h1': FALSE
-            'h2': FALSE
-            'h3': FALSE
-            'pre': FALSE
-            'removeFormat': TRUE
-          'table':
-            'table': FALSE
-          'list': { }
-          'link':
-            'a': TRUE
+          format:
+            strong: true
+            em: true
+            u: false
+            sub: false
+            sup: false
+            del: false
+            p: true
+            h1: false
+            h2: false
+            h3: false
+            pre: false
+            removeFormat: true
+          table:
+            table: false
+          list: {  }
+          link:
+            a: true
           alignment: {  }
-          'formatlesspaste':
-            'button': true # Show toggle button for formatless pasting.
-            'formatlessPasteOption': true # Whether the format less pasting should be enable by default.
-            'autoparagraph': true
-
+          formatlesspaste:
+            button: true
+            formatlessPasteOption: true
+            autoparagraph: true
 'Psmb.NodeTypes:Small':
   superTypes:
-    'TYPO3.Neos:Content': true
+    'TYPO3.Neos:Content': '1'
   ui:
     label: 'Петит (для сносок)'
-    icon: 'icon-file-text-alt'
+    icon: icon-file-text-alt
     position: 80
   properties:
     text:
@@ -293,51 +279,47 @@
         inlineEditable: true
         aloha:
           placeholder: '<p>Введите текст</p>'
-          'format':
-            'strong': TRUE
-            'em': TRUE
-            'u': FALSE
-            'sub': FALSE
-            'sup': FALSE
-            'del': FALSE
-            'p': TRUE
-            'h1': FALSE
-            'h2': FALSE
-            'h3': FALSE
-            'pre': FALSE
-            'removeFormat': TRUE
-          'table':
-            'table': FALSE
-          'list': { }
-          'link':
-            'a': TRUE
+          format:
+            strong: true
+            em: true
+            u: false
+            sub: false
+            sup: false
+            del: false
+            p: true
+            h1: false
+            h2: false
+            h3: false
+            pre: false
+            removeFormat: true
+          table:
+            table: false
+          list: {  }
+          link:
+            a: true
           alignment: {  }
-          'formatlesspaste':
-            'button': true # Show toggle button for formatless pasting.
-            'formatlessPasteOption': true # Whether the format less pasting should be enable by default.
-            'autoparagraph': true
-
-
-# Misc
-
+          formatlesspaste:
+            button: true
+            formatlessPasteOption: true
+            autoparagraph: true
 'Psmb.NodeTypes:Asset':
   superTypes:
-    'TYPO3.Neos:Content': true
+    'TYPO3.Neos:Content': '1'
   ui:
-    label: 'Файл'
-    icon: 'icon-files-o'
+    label: Файл
+    icon: icon-files-o
     position: 90
     inspector:
       groups:
         asset:
-          label: 'Файл'
+          label: Файл
   properties:
     asset:
       type: TYPO3\Media\Domain\Model\Asset
       ui:
         inspector:
           group: asset
-        label: 'Файл'
+        label: Файл
         reloadIfChanged: true
     title:
       type: string
@@ -345,13 +327,12 @@
         inspector:
           group: asset
           label: 'Подпись к файлу'
-
 'Psmb.NodeTypes:Container':
   superTypes:
-    'TYPO3.Neos:Content': true
+    'TYPO3.Neos:Content': '1'
   ui:
-    label: 'Контэйнер'
-    icon: 'icon-archive'
+    label: Контэйнер
+    icon: icon-archive
     group: structure
     inspector:
       groups:
@@ -359,7 +340,7 @@
           label: 'Свойства контэйнера'
   constraints:
     nodeTypes:
-      '*' : true
+      '*': true
   properties:
     class:
       type: string
@@ -367,53 +348,51 @@
         label: 'Custom HTML classes'
         inspector:
           group: container
-
 'Psmb.NodeTypes:ContainerOverImage':
   superTypes:
-    'TYPO3.Neos:Content': true
-    'TYPO3.Neos:ContentCollection': true
+    'TYPO3.Neos:Content': '1'
+    'TYPO3.Neos:ContentCollection': '1'
   ui:
     label: 'Фоновое изображение с контентом'
-    icon: 'icon-picture'
+    icon: icon-picture
     group: structure
     inspector:
       groups:
         image:
-          label: 'Свойства'
+          label: Свойства
   constraints:
     nodeTypes:
-      '*' : true
+      '*': true
   properties:
     image:
       type: TYPO3\Media\Domain\Model\ImageInterface
       ui:
-        label: 'Изображение'
-        reloadIfChanged: TRUE
+        label: Изображение
+        reloadIfChanged: true
         inspector:
           group: image
-
 'Psmb.NodeTypes:Html':
   superTypes:
-    'TYPO3.Neos:Content': TRUE
+    'TYPO3.Neos:Content': '1'
   ui:
-    label: 'HTML'
-    icon: 'icon-code'
+    label: HTML
+    icon: icon-code
     position: 100
     inspector:
       groups:
         html:
-          label: 'HTML'
-          icon: 'icon-code'
+          label: HTML
+          icon: icon-code
           position: 10
   properties:
     source:
       type: string
       defaultValue: '<p>HTML сюда</p>'
       ui:
-        label: 'HTML'
-        reloadIfChanged: TRUE
+        label: HTML
+        reloadIfChanged: true
         inspector:
-          group: 'html'
-          editor: 'TYPO3.Neos/Inspector/Editors/CodeEditor'
+          group: html
+          editor: TYPO3.Neos/Inspector/Editors/CodeEditor
           editorOptions:
             buttonLabel: 'Редактировать HTML'
