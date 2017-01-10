@@ -79,6 +79,7 @@
     label: Картинка
     icon: icon-picture
     position: 30
+    inlineEditable: true
     inspector:
       groups:
         image:
