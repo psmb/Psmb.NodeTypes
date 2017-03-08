@@ -328,6 +328,31 @@
         inspector:
           group: asset
           label: 'Подпись к файлу'
+'Psmb.NodeTypes:Button':
+  superTypes:
+    'Neos.Neos:Content': true
+  ui:
+    label: Кнопка
+    icon: icon-external-link
+    inspector:
+      groups:
+        link:
+          label: Ссылка
+          position: 100
+  properties:
+    target:
+      type: string
+      ui:
+        label: 'Адрес ссылки'
+        reloadIfChanged: false
+        inspector:
+          group: link
+          editor: Neos.Neos/Inspector/Editors/LinkEditor
+    text:
+      type: string
+      defaultValue: 'Текст ссылки'
+      ui:
+        inlineEditable: true
 'Psmb.NodeTypes:Container':
   superTypes:
     'Neos.Neos:Content': true

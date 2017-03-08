@@ -132,6 +132,22 @@ prototype(Psmb.NodeTypes:Asset) < prototype(Neos.Fusion:Tag) {
 	@process.contentElementWrapping = ContentElementWrapping
 }
 
+prototype(Psmb.NodeTypes:Button) < prototype(Neos.Fusion:Tag) {
+	attributes.class = 'Button button button--alt'
+	content = Neos.Fusion:Tag {
+		tagName = 'a'
+		attributes.href = ${node.properties.target}
+		attributes.href.@process.convertUris = ConvertUris {
+			forceConversion = true
+		}
+		content = ${q(node).property('text')}
+		@process.contentElementEditable = ContentElementEditable {
+			property = 'text'
+		}
+	}
+	@process.contentElementWrapping = ContentElementWrapping
+}
+
 prototype(Psmb.NodeTypes:ContainerOverImage) < prototype(Neos.Fusion:Tag) {
 	@context.imageUri = ImageUri {
 		asset = ${q(node).property('image')}
