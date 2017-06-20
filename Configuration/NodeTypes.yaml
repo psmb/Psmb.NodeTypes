@@ -154,6 +154,7 @@
     text:
       type: string
       ui:
+        placeholder: '<p>Введите текст</p>'
         inlineEditable: true
 'Psmb.NodeTypes:Blockquote':
   superTypes:
