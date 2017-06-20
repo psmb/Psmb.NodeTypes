@@ -360,6 +360,7 @@
     label: Контэйнер
     icon: icon-archive
     group: structure
+    inlineEditable: true
     inspector:
       groups:
         container:
