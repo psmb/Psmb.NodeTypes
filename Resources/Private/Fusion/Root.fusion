@@ -183,3 +183,10 @@ prototype(Psmb.NodeTypes:Html) < prototype(Neos.Fusion:Tag) {
 	content = ${node.properties.source}
 	@process.contentElementWrapping = ContentElementWrapping
 }
+
+prototype(Psmb.NodeTypes:Images) < prototype(Neos.Fusion:Tag) {
+	attributes.class = 'Images'
+	content = ContentCollectionRenderer {
+		@process.contentElementWrapping = ContentElementWrapping
+	}
+}
