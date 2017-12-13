@@ -3,7 +3,8 @@
     "type": "neos-package",
     "name": "psmb/nodetypes",
     "require": {
-        "neos/neos": "~3.0"
+        "neos/neos": "~3.0",
+        "flowpack/nodetemplates": "*"
     },
     "license": "MIT",
     "autoload": {

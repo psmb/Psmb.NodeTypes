@@ -424,3 +424,30 @@
           editor: Neos.Neos/Inspector/Editors/CodeEditor
           editorOptions:
             buttonLabel: 'Редактировать HTML'
+
+'Psmb.NodeTypes:Images':
+  superTypes:
+    'Neos.Neos:Content': true
+    'Neos.Neos:ContentCollection': true
+  options:
+    template:
+      childNodes:
+        image:
+          name: '${"image" + key}'
+          type: 'Psmb.NodeTypes:Image'
+          properties:
+            image: '${item}'
+          withItems: '${data.images}'
+  ui:
+    creationDialog:
+      elements:
+        images:
+          type: array<Neos\Media\Domain\Model\ImageInterface>
+          ui:
+            label: 'Images'
+            editor: 'Neos.Neos/Inspector/Editors/AssetEditor'
+            editorOptions:
+              multiple: true
+    label: 'Multiple images'
+    inlineEditable: true
+    icon: icon-picture
