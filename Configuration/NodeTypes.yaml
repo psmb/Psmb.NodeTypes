@@ -444,10 +444,11 @@
         images:
           type: array<Neos\Media\Domain\Model\ImageInterface>
           ui:
-            label: 'Images'
+            label: 'Картинки'
             editor: 'Neos.Neos/Inspector/Editors/AssetEditor'
             editorOptions:
               multiple: true
-    label: 'Multiple images'
+    label: 'Много картинок'
     inlineEditable: true
     icon: icon-picture
+    position: 31
