@@ -38,7 +38,7 @@
           formatlesspaste:
             button: true
             formatlessPasteOption: true
-            autoparagraph: true
+          autoparagraph: true
 'Psmb.NodeTypes:Headline':
   superTypes:
     'Neos.Neos:Content': true
@@ -142,7 +142,7 @@
           formatlesspaste:
             button: true
             formatlessPasteOption: true
-            autoparagraph: true
+          autoparagraph: true
 'Psmb.NodeTypes:Epigraph':
   superTypes:
     'Neos.Neos:Content': true
@@ -192,7 +192,7 @@
           formatlesspaste:
             button: true
             formatlessPasteOption: true
-            autoparagraph: true
+          autoparagraph: true
 'Psmb.NodeTypes:Section':
   superTypes:
     'Neos.Neos:Content': true
@@ -229,7 +229,7 @@
           formatlesspaste:
             button: true
             formatlessPasteOption: true
-            autoparagraph: true
+          autoparagraph: true
 'Psmb.NodeTypes:Aside':
   superTypes:
     'Neos.Neos:Content': true
@@ -266,7 +266,7 @@
           formatlesspaste:
             button: true
             formatlessPasteOption: true
-            autoparagraph: true
+          autoparagraph: true
 'Psmb.NodeTypes:Small':
   superTypes:
     'Neos.Neos:Content': true
@@ -303,7 +303,7 @@
           formatlesspaste:
             button: true
             formatlessPasteOption: true
-            autoparagraph: true
+          autoparagraph: true
 'Psmb.NodeTypes:Asset':
   superTypes:
     'Neos.Neos:Content': true
