@@ -96,6 +96,7 @@
           editor: 'Flowpack.StructuredEditing/EditorEnvelope'
           editorOptions:
             editor: 'Neos.Neos/Inspector/Editors/ImageEditor'
+            icon: icon-picture
     caption:
       type: string
       ui:
