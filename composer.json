@@ -4,7 +4,8 @@
     "name": "psmb/nodetypes",
     "require": {
         "neos/neos": "~3.0",
-        "flowpack/nodetemplates": "*"
+        "flowpack/nodetemplates": "*",
+        "flowpack/structuredediting": "*"
     },
     "license": "MIT",
     "autoload": {

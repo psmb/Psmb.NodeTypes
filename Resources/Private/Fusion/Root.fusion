@@ -115,6 +115,9 @@ prototype(Psmb.NodeTypes:Epigraph) < prototype(Neos.Fusion:Tag) {
 prototype(Psmb.NodeTypes:Image) < prototype(Neos.Fusion:Tag) {
 	tagName = 'figure'
 	content = Neos.Fusion:Array {
+		editable = ContentElementEditable {
+			property = 'image'
+		}
 		image = Neos.Fusion:Tag {
 			tagName = 'img'
 			attributes.alt = ${q(node).property('alt') || q(node).property('caption')}

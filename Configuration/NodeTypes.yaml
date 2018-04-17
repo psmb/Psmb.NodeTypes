@@ -92,6 +92,10 @@
         reloadIfChanged: true
         inspector:
           group: image
+        inline:
+          editor: 'Flowpack.StructuredEditing/EditorEnvelope'
+          editorOptions:
+            editor: 'Neos.Neos/Inspector/Editors/ImageEditor'
     caption:
       type: string
       ui:
