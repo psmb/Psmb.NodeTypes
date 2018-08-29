@@ -240,7 +240,7 @@
     'Neos.Neos:Content': true
   ui:
     label: 'Врезка на полях'
-    icon: icon-file-text-alt
+    icon: quote-right
     position: 80
   properties:
     text:
@@ -277,7 +277,7 @@
     'Neos.Neos:Content': true
   ui:
     label: 'Петит (для сносок)'
-    icon: icon-file-text-alt
+    icon: text-height
     position: 80
   properties:
     text:
