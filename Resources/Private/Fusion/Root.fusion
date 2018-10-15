@@ -1,7 +1,7 @@
 prototype(Psmb.NodeTypes:ImageUri) < prototype(Neos.Fusion:Case) {
 	image {
 		condition = ${asset}
-		renderer = ImageUri {
+		renderer = Neos.Neos:ImageUri {
 			asset = ${asset}
 			width = ${width}
 			height = ${height}
@@ -25,97 +25,97 @@ prototype(Psmb.NodeTypes:Text) < prototype(Neos.Fusion:Tag) {
 	attributes.class = 'Text'
 	content = Neos.Fusion:Tag {
 		content = ${q(node).property('text')}
-		@process.contentElementEditable = ContentElementEditable {
+		@process.contentElementEditable = Neos.Neos:ContentElementEditable {
 			property = 'text'
 		}
 	}
 	@process.convertUris = Neos.Neos:ConvertUris
-	@process.contentElementWrapping = ContentElementWrapping
+	@process.contentElementWrapping = Neos.Neos:ContentElementWrapping
 }
 prototype(Psmb.NodeTypes:Headline) < prototype(Neos.Fusion:Tag) {
 	attributes.class = 'Headline'
 	content = Neos.Fusion:Tag {
 		content = ${q(node).property('text')}
-		@process.contentElementEditable = ContentElementEditable {
+		@process.contentElementEditable = Neos.Neos:ContentElementEditable {
 			property = 'text'
 		}
 	}
 	@process.convertUris = Neos.Neos:ConvertUris
-	@process.contentElementWrapping = ContentElementWrapping
+	@process.contentElementWrapping = Neos.Neos:ContentElementWrapping
 }
 prototype(Psmb.NodeTypes:Lead) < prototype(Neos.Fusion:Tag) {
 	attributes.class = 'Lead'
 	content = Neos.Fusion:Tag {
 		content = ${q(node).property('text')}
-		@process.contentElementEditable = ContentElementEditable {
+		@process.contentElementEditable = Neos.Neos:ContentElementEditable {
 			property = 'text'
 		}
 	}
 	@process.convertUris = Neos.Neos:ConvertUris
-	@process.contentElementWrapping = ContentElementWrapping
+	@process.contentElementWrapping = Neos.Neos:ContentElementWrapping
 }
 prototype(Psmb.NodeTypes:Blockquote) < prototype(Neos.Fusion:Tag) {
 	tagName = 'blockquote'
 	attributes.class = 'Blockquote'
 	content = Neos.Fusion:Tag {
 		content = ${q(node).property('text')}
-		@process.contentElementEditable = ContentElementEditable {
+		@process.contentElementEditable = Neos.Neos:ContentElementEditable {
 			property = 'text'
 		}
 	}
 	@process.convertUris = Neos.Neos:ConvertUris
-	@process.contentElementWrapping = ContentElementWrapping
+	@process.contentElementWrapping = Neos.Neos:ContentElementWrapping
 }
 prototype(Psmb.NodeTypes:Section) < prototype(Neos.Fusion:Tag) {
 	tagName = 'section'
 	attributes.class = 'Section'
 	content = Neos.Fusion:Tag {
 		content = ${q(node).property('text')}
-		@process.contentElementEditable = ContentElementEditable {
+		@process.contentElementEditable = Neos.Neos:ContentElementEditable {
 			property = 'text'
 		}
 	}
 	@process.convertUris = Neos.Neos:ConvertUris
-	@process.contentElementWrapping = ContentElementWrapping
+	@process.contentElementWrapping = Neos.Neos:ContentElementWrapping
 }
 prototype(Psmb.NodeTypes:Aside) < prototype(Neos.Fusion:Tag) {
 	tagName = 'aside'
 	attributes.class = 'Aside'
 	content = Neos.Fusion:Tag {
 		content = ${q(node).property('text')}
-		@process.contentElementEditable = ContentElementEditable {
+		@process.contentElementEditable = Neos.Neos:ContentElementEditable {
 			property = 'text'
 		}
 	}
 	@process.convertUris = Neos.Neos:ConvertUris
-	@process.contentElementWrapping = ContentElementWrapping
+	@process.contentElementWrapping = Neos.Neos:ContentElementWrapping
 }
 prototype(Psmb.NodeTypes:Small) < prototype(Neos.Fusion:Tag) {
 	attributes.class = 'Small'
 	content = Neos.Fusion:Tag {
 		content = ${q(node).property('text')}
-		@process.contentElementEditable = ContentElementEditable {
+		@process.contentElementEditable = Neos.Neos:ContentElementEditable {
 			property = 'text'
 		}
 	}
 	@process.convertUris = Neos.Neos:ConvertUris
-	@process.contentElementWrapping = ContentElementWrapping
+	@process.contentElementWrapping = Neos.Neos:ContentElementWrapping
 }
 prototype(Psmb.NodeTypes:Epigraph) < prototype(Neos.Fusion:Tag) {
 	attributes.class = 'Epigraph'
 	content = Neos.Fusion:Tag {
 		content = ${q(node).property('text')}
-		@process.contentElementEditable = ContentElementEditable {
+		@process.contentElementEditable = Neos.Neos:ContentElementEditable {
 			property = 'text'
 		}
 	}
 	@process.convertUris = Neos.Neos:ConvertUris
-	@process.contentElementWrapping = ContentElementWrapping
+	@process.contentElementWrapping = Neos.Neos:ContentElementWrapping
 }
 prototype(Psmb.NodeTypes:Image) < prototype(Neos.Fusion:Tag) {
 	tagName = 'figure'
 	content = Neos.Fusion:Array {
-		editable = ContentElementEditable {
+		editable = Neos.Neos:ContentElementEditable {
 			property = 'image'
 		}
 		image = Neos.Fusion:Tag {
@@ -133,15 +133,15 @@ prototype(Psmb.NodeTypes:Image) < prototype(Neos.Fusion:Tag) {
 			@process.convertUris = Neos.Neos:ConvertUris
 		}
 	}
-	@process.contentElementWrapping = ContentElementWrapping
+	@process.contentElementWrapping = Neos.Neos:ContentElementWrapping
 }
 prototype(Psmb.NodeTypes:Asset) < prototype(Neos.Fusion:Tag) {
 	tagName = 'a'
 	attributes.href = ${'asset://' + node.properties.asset.identifier}
-	attributes.href.@process.convertUris = ConvertUris
+	attributes.href.@process.convertUris = Neos.Neos:ConvertUris
 	content = ${q(node).property('title')}
 	@process.wrap = ${'<div>' + value + '</div>'}
-	@process.contentElementWrapping = ContentElementWrapping
+	@process.contentElementWrapping = Neos.Neos:ContentElementWrapping
 }
 
 prototype(Psmb.NodeTypes:Button) < prototype(Neos.Fusion:Tag) {
@@ -149,47 +149,47 @@ prototype(Psmb.NodeTypes:Button) < prototype(Neos.Fusion:Tag) {
 	content = Neos.Fusion:Tag {
 		tagName = 'a'
 		attributes.href = ${node.properties.target}
-		attributes.href.@process.convertUris = ConvertUris {
+		attributes.href.@process.convertUris = Neos.Neos:ConvertUris {
 			forceConversion = true
 		}
 		content = ${q(node).property('text')}
-		@process.contentElementEditable = ContentElementEditable {
+		@process.contentElementEditable = Neos.Neos:ContentElementEditable {
 			property = 'text'
 		}
 	}
-	@process.contentElementWrapping = ContentElementWrapping
+	@process.contentElementWrapping = Neos.Neos:ContentElementWrapping
 }
 
 prototype(Psmb.NodeTypes:ContainerOverImage) < prototype(Neos.Fusion:Tag) {
-	@context.imageUri = ImageUri {
+	@context.imageUri = Neos.Neos:ImageUri {
 		asset = ${q(node).property('image')}
 		maximumWidth = 1600
 	}
 	attributes.class = 'ContainerOverImage'
 	attributes.style = ${'background-image: url(' + imageUri + ')'}
-	content = ContentCollectionRenderer {
+	content = Neos.Neos:ContentCollectionRenderer {
 		@process.tmpl = ${'<div class="ContainerOverImage-inner">' + value + '</div>'}
-		@process.contentElementWrapping = ContentElementWrapping
+		@process.contentElementWrapping = Neos.Neos:ContentElementWrapping
 	}
 }
 
 prototype(Psmb.NodeTypes:Container) < prototype(Neos.Fusion:Tag) {
 	attributes.class = ${'Container ' + node.properties.class}
 	attributes.id = ${node.properties.navTitle}
-	content = ContentCollectionRenderer {
-		@process.contentElementWrapping = ContentElementWrapping
+	content = Neos.Neos:ContentCollectionRenderer {
+		@process.contentElementWrapping = Neos.Neos:ContentElementWrapping
 	}
 }
 
 prototype(Psmb.NodeTypes:Html) < prototype(Neos.Fusion:Tag) {
 	attributes.class = 'Html'
 	content = ${node.properties.source}
-	@process.contentElementWrapping = ContentElementWrapping
+	@process.contentElementWrapping = Neos.Neos:ContentElementWrapping
 }
 
 prototype(Psmb.NodeTypes:Images) < prototype(Neos.Fusion:Tag) {
 	attributes.class = 'Images'
-	content = ContentCollectionRenderer {
-		@process.contentElementWrapping = ContentElementWrapping
+	content = Neos.Neos:ContentCollectionRenderer {
+		@process.contentElementWrapping = Neos.Neos:ContentElementWrapping
 	}
 }
