@@ -1,8 +1,8 @@
 # Main
 
-'Psmb.NodeTypes:Text':
+"Psmb.NodeTypes:Text":
   superTypes:
-    'Neos.Neos:Content': true
+    "Neos.Neos:Content": true
   ui:
     label: Текст
     icon: icon-file-text
@@ -13,7 +13,7 @@
       ui:
         inlineEditable: true
         aloha:
-          placeholder: '<p>Введите текст</p>'
+          placeholder: "<p>Введите текст</p>"
           format:
             strong: true
             em: true
@@ -34,14 +34,14 @@
             ul: true
           link:
             a: true
-          alignment: {  }
+          alignment: {}
           formatlesspaste:
             button: true
             formatlessPasteOption: true
           autoparagraph: true
-'Psmb.NodeTypes:Headline':
+"Psmb.NodeTypes:Headline":
   superTypes:
-    'Neos.Neos:Content': true
+    "Neos.Neos:Content": true
   ui:
     label: Заголовок
     icon: icon-header
@@ -52,7 +52,7 @@
       ui:
         inlineEditable: true
         aloha:
-          placeholder: '<h2>Введите текст</h2>'
+          placeholder: "<h2>Введите текст</h2>"
           format:
             strong: false
             em: false
@@ -68,13 +68,13 @@
             removeFormat: true
           table:
             table: false
-          list: {  }
+          list: {}
           link:
             a: true
-          alignment: {  }
-'Psmb.NodeTypes:Image':
+          alignment: {}
+"Psmb.NodeTypes:Image":
   superTypes:
-    'Neos.Neos:Content': true
+    "Neos.Neos:Content": true
   ui:
     label: Картинка
     icon: icon-picture
@@ -93,9 +93,9 @@
         inspector:
           group: image
         inline:
-          editor: 'Flowpack.StructuredEditing/EditorEnvelope'
+          editor: "Flowpack.StructuredEditing/EditorEnvelope"
           editorOptions:
-            editor: 'Neos.Neos/Inspector/Editors/ImageEditor'
+            editor: "Neos.Neos/Inspector/Editors/ImageEditor"
             icon: icon-picture
     caption:
       type: string
@@ -107,13 +107,13 @@
     alt:
       type: string
       ui:
-        label: 'Альтернативный текст (если не задан, используется подпись)'
+        label: "Альтернативный текст (если не задан, используется подпись)"
         reloadIfChanged: true
         inspector:
           group: image
-'Psmb.NodeTypes:Lead':
+"Psmb.NodeTypes:Lead":
   superTypes:
-    'Neos.Neos:Content': true
+    "Neos.Neos:Content": true
   ui:
     label: Лид
     icon: icon-font
@@ -124,7 +124,7 @@
       ui:
         inlineEditable: true
         aloha:
-          placeholder: '<p>Введите текст</p>'
+          placeholder: "<p>Введите текст</p>"
           format:
             strong: true
             em: true
@@ -140,17 +140,17 @@
             removeFormat: true
           table:
             table: false
-          list: {  }
+          list: {}
           link:
             a: true
-          alignment: {  }
+          alignment: {}
           formatlesspaste:
             button: true
             formatlessPasteOption: true
           autoparagraph: true
-'Psmb.NodeTypes:Epigraph':
+"Psmb.NodeTypes:Epigraph":
   superTypes:
-    'Neos.Neos:Content': true
+    "Neos.Neos:Content": true
   ui:
     label: Эпиграф
     icon: icon-font
@@ -159,13 +159,13 @@
     text:
       type: string
       ui:
-        placeholder: '<p>Введите текст</p>'
+        placeholder: "<p>Введите текст</p>"
         inlineEditable: true
-'Psmb.NodeTypes:Blockquote':
+"Psmb.NodeTypes:Blockquote":
   superTypes:
-    'Neos.Neos:Content': true
+    "Neos.Neos:Content": true
   ui:
-    label: 'Цитата (врезка)'
+    label: "Цитата (врезка)"
     icon: icon-angle-right
     position: 60
   properties:
@@ -174,7 +174,7 @@
       ui:
         inlineEditable: true
         aloha:
-          placeholder: '<p>Введите текст</p>'
+          placeholder: "<p>Введите текст</p>"
           format:
             strong: true
             em: true
@@ -190,19 +190,19 @@
             removeFormat: true
           table:
             table: false
-          list: {  }
+          list: {}
           link:
             a: true
-          alignment: {  }
+          alignment: {}
           formatlesspaste:
             button: true
             formatlessPasteOption: true
           autoparagraph: true
-'Psmb.NodeTypes:Section':
+"Psmb.NodeTypes:Section":
   superTypes:
-    'Neos.Neos:Content': true
+    "Neos.Neos:Content": true
   ui:
-    label: 'Секция (большая справка)'
+    label: "Секция (большая справка)"
     icon: icon-file-text
     position: 70
   properties:
@@ -211,7 +211,7 @@
       ui:
         inlineEditable: true
         aloha:
-          placeholder: '<p>Введите текст</p>'
+          placeholder: "<p>Введите текст</p>"
           format:
             strong: true
             em: true
@@ -227,19 +227,19 @@
             removeFormat: true
           table:
             table: false
-          list: {  }
+          list: {}
           link:
             a: true
-          alignment: {  }
+          alignment: {}
           formatlesspaste:
             button: true
             formatlessPasteOption: true
           autoparagraph: true
-'Psmb.NodeTypes:Aside':
+"Psmb.NodeTypes:Aside":
   superTypes:
-    'Neos.Neos:Content': true
+    "Neos.Neos:Content": true
   ui:
-    label: 'Врезка на полях'
+    label: "Врезка на полях"
     icon: quote-right
     position: 80
   properties:
@@ -248,7 +248,7 @@
       ui:
         inlineEditable: true
         aloha:
-          placeholder: '<p>Введите текст</p>'
+          placeholder: "<p>Введите текст</p>"
           format:
             strong: true
             em: true
@@ -264,19 +264,19 @@
             removeFormat: true
           table:
             table: false
-          list: {  }
+          list: {}
           link:
             a: true
-          alignment: {  }
+          alignment: {}
           formatlesspaste:
             button: true
             formatlessPasteOption: true
           autoparagraph: true
-'Psmb.NodeTypes:Small':
+"Psmb.NodeTypes:Small":
   superTypes:
-    'Neos.Neos:Content': true
+    "Neos.Neos:Content": true
   ui:
-    label: 'Петит (для сносок)'
+    label: "Петит (для сносок)"
     icon: text-height
     position: 80
   properties:
@@ -285,7 +285,7 @@
       ui:
         inlineEditable: true
         aloha:
-          placeholder: '<p>Введите текст</p>'
+          placeholder: "<p>Введите текст</p>"
           format:
             strong: true
             em: true
@@ -301,17 +301,17 @@
             removeFormat: true
           table:
             table: false
-          list: {  }
+          list: {}
           link:
             a: true
-          alignment: {  }
+          alignment: {}
           formatlesspaste:
             button: true
             formatlessPasteOption: true
           autoparagraph: true
-'Psmb.NodeTypes:Asset':
+"Psmb.NodeTypes:Asset":
   superTypes:
-    'Neos.Neos:Content': true
+    "Neos.Neos:Content": true
   ui:
     label: Файл
     icon: icon-files-o
@@ -333,10 +333,10 @@
       ui:
         inspector:
           group: asset
-          label: 'Подпись к файлу'
-'Psmb.NodeTypes:Button':
+          label: "Подпись к файлу"
+"Psmb.NodeTypes:Button":
   superTypes:
-    'Neos.Neos:Content': true
+    "Neos.Neos:Content": true
   ui:
     label: Кнопка
     icon: icon-external-link
@@ -349,19 +349,19 @@
     target:
       type: string
       ui:
-        label: 'Адрес ссылки'
+        label: "Адрес ссылки"
         reloadIfChanged: false
         inspector:
           group: link
           editor: Neos.Neos/Inspector/Editors/LinkEditor
     text:
       type: string
-      defaultValue: 'Текст ссылки'
+      defaultValue: "Текст ссылки"
       ui:
         inlineEditable: true
-'Psmb.NodeTypes:Container':
+"Psmb.NodeTypes:Container":
   superTypes:
-    'Neos.Neos:Content': true
+    "Neos.Neos:Content": true
   ui:
     label: Контэйнер
     icon: icon-archive
@@ -370,23 +370,23 @@
     inspector:
       groups:
         container:
-          label: 'Свойства контэйнера'
+          label: "Свойства контэйнера"
   constraints:
     nodeTypes:
-      '*': true
+      "*": true
   properties:
     class:
       type: string
       ui:
-        label: 'Custom HTML classes'
+        label: "Custom HTML classes"
         inspector:
           group: container
-'Psmb.NodeTypes:ContainerOverImage':
+"Psmb.NodeTypes:ContainerOverImage":
   superTypes:
-    'Neos.Neos:Content': true
-    'Neos.Neos:ContentCollection': true
+    "Neos.Neos:Content": true
+    "Neos.Neos:ContentCollection": true
   ui:
-    label: 'Фоновое изображение с контентом'
+    label: "Фоновое изображение с контентом"
     icon: icon-picture
     group: structure
     inspector:
@@ -395,7 +395,7 @@
           label: Свойства
   constraints:
     nodeTypes:
-      '*': true
+      "*": true
   properties:
     image:
       type: Neos\Media\Domain\Model\ImageInterface
@@ -404,9 +404,9 @@
         reloadIfChanged: true
         inspector:
           group: image
-'Psmb.NodeTypes:Html':
+"Psmb.NodeTypes:Html":
   superTypes:
-    'Neos.Neos:Content': true
+    "Neos.Neos:Content": true
   ui:
     label: HTML
     icon: icon-code
@@ -420,7 +420,7 @@
   properties:
     source:
       type: string
-      defaultValue: '<p>HTML сюда</p>'
+      defaultValue: "<p>HTML сюда</p>"
       ui:
         label: HTML
         reloadIfChanged: true
@@ -428,32 +428,75 @@
           group: html
           editor: Neos.Neos/Inspector/Editors/CodeEditor
           editorOptions:
-            buttonLabel: 'Редактировать HTML'
+            buttonLabel: "Редактировать HTML"
 
-'Psmb.NodeTypes:Images':
+"Psmb.NodeTypes:Images":
   superTypes:
-    'Neos.Neos:Content': true
-    'Neos.Neos:ContentCollection': true
+    "Neos.Neos:Content": true
+    "Neos.Neos:ContentCollection": true
   options:
     template:
       childNodes:
         image:
           name: '${"image" + key}'
-          type: 'Psmb.NodeTypes:Image'
+          type: "Psmb.NodeTypes:Image"
           properties:
-            image: '${item}'
-          withItems: '${data.images}'
+            image: "${item}"
+          withItems: "${data.images}"
   ui:
     creationDialog:
       elements:
         images:
           type: array<Neos\Media\Domain\Model\ImageInterface>
           ui:
-            label: 'Картинки'
-            editor: 'Neos.Neos/Inspector/Editors/AssetEditor'
+            label: "Картинки"
+            editor: "Neos.Neos/Inspector/Editors/AssetEditor"
             editorOptions:
               multiple: true
-    label: 'Много картинок'
+    label: "Много картинок"
     inlineEditable: true
     icon: icon-picture
     position: 31
+
+"Psmb.NodeTypes:Accordion":
+  superTypes:
+    "Neos.Neos:Content": true
+  ui:
+    label: "Аккордион"
+    icon: bars
+    group: structure
+    inlineEditable: true
+    inspector:
+      groups:
+        sections:
+          label: Аккордион
+          position: 5
+  constraints:
+    nodeTypes:
+      "Psmb.NodeTypes:AccordionItem": true
+
+"Psmb.NodeTypes:AccordionItem":
+  superTypes:
+    "Neos.Neos:Content": true
+    "Neos.Neos:ContentCollection": true
+  ui:
+    label: Вкладка аккордиона
+    group: structure
+    inlineEditable: true
+    inspector:
+      groups:
+        title:
+          label: "Свойства вкладки"
+          position: 100
+  properties:
+    title:
+      type: string
+      defaultValue: "Название вкладки"
+  constraints:
+    nodeTypes:
+      "*": true
+
+"Neos.Neos:ContentCollection":
+  constraints:
+    nodeTypes:
+      "Psmb.NodeTypes:AccordionItem": false
